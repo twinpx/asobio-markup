@@ -1,0 +1,49 @@
+<div id="bx-panel" style="height: 20px; background: #eee; position: static; z-index: 1001; width: 100%;"></div>
+
+<header class="bj-page-header">
+	<section class="bj-page-header__top">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-5 col-xs-12 bj-logo-space">
+					<!--#if expr="$page='index'" -->
+						<span class="bj-logo"><img src="/upload/logo.png" title="Logo"></span>
+					<!--#else -->
+						<a href="/" class="bj-logo"><img src="/upload/logo.png" title="Logo"></a>
+					<!--#endif -->
+					
+					<a href="/info/" class="visible-xs-inline-block bj-logo-space__icon bj-info-icon"></a>
+					
+					<!--#include virtual="/blocks/page/header/user.html"-->
+					
+					<span id="sale-basket-basket-line-container">
+						<a href="/personal/cart/" class="bj-logo-space__icon bj-cart-icon">
+							<span class="glyphicon glyphicon-shopping-cart" data-toggle="tooltip" data-placement="bottom" title="Корзина"></span>
+							<span class="bj-cart-icon__num">99</span>
+						</a>
+					</span>
+					<span class="bj-page-header__search hidden-sm hidden-xs">
+						<span class="glyphicon glyphicon-search hidden-sm hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Поиск"></span>
+						<form action="/search/">
+							<input type="search" value="" class="bj-page-header__search__input form-control">
+						</form>
+					</span>
+				</div>
+				<div class="col-md-5 hidden-sm hidden-xs">
+					<nav class="bj-top-nav">
+						<a href="/catalogue/sales/">Акции</a>
+						<a href="/delivery/">Доставка</a>
+						<a href="/about/">О магазине</a>
+					</nav>
+				</div>
+				<div class="col-md-2 hidden-sm hidden-xs bj-phone">
+					<span class="glyphicon glyphicon-earphone"></span>
+					<span class="bj-phone__num">
+						 800 200 30 30
+						 <span class="bj-phone__time">c 8:00 до 23:00</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+  <!--#include virtual="/components/asobio-subnav/template.html"-->
+</header>

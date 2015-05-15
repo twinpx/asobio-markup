@@ -1,0 +1,114 @@
+div.bx-auth{
+	max-width: 600px;
+	margin-top: 12px;
+	margin-bottom: 10px;
+	
+	form {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+input[type=email] {
+	background-image: url(images/envelope.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	padding-left: 42px;
+}
+
+.bj {
+	&-range {
+		
+		&__input {
+		
+			&-min,
+			&-max {
+				display: none !important;
+			}
+		}
+    
+    .ui-slider-handle {
+      width: 4px;
+      height: 19px;
+      background: #333 !important;
+      border-radius: 0;
+      border: none;
+    }
+    
+    .ui-slider,
+    .ui-slider-horizontal .ui-slider-range {
+      border-radius: 0 !important;
+      border: 0 !important;
+    }
+    
+    .ui-slider {
+      background: #ccc;
+    }
+    
+    .ui-slider-horizontal {
+      height: 11px;
+    }
+	}
+	
+	&-reset-button {
+		width: 34px;
+		height: 34px;
+		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOJJREFUeNpskb0OAUEURneXV5Ao1GztXQQhfisJiXgGJREiWxB/oRS8CK3tKfVCYZ0rl0xkNzm5O7Nn5s43ax9TqYFlWTEopX3/ZYU8J9f1KBFHxQIsmLRDxBGlAXGRK7CSnWFqLuC9R2nBHjJ2EAQyKYsmUIclNKELbdhCkSM+PrLuIjvOtZMPLuwgj/gU5ycbrc8qXiGJeP9+c/7EgYoXSMDYzOAYYl/PKGHScjtQ09DOT2YwpHQ0TI7WNw070zqXDjY/xdN7PED2G8YILR3KsJGdo2GiPIwlfRXWcoq3AAMA/AlTLvE9kh0AAAAASUVORK5CYII=") no-repeat center center;
+		border: 0;
+		padding: 0;
+		
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			.box-shadow(none);
+			background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOJJREFUeNpskb0OAUEURneXV5Ao1GztXQQhfisJiXgGJREiWxB/oRS8CK3tKfVCYZ0rl0xkNzm5O7Nn5s43ax9TqYFlWTEopX3/ZYU8J9f1KBFHxQIsmLRDxBGlAXGRK7CSnWFqLuC9R2nBHjJ2EAQyKYsmUIclNKELbdhCkSM+PrLuIjvOtZMPLuwgj/gU5ycbrc8qXiGJeP9+c/7EgYoXSMDYzOAYYl/PKGHScjtQ09DOT2YwpHQ0TI7WNw070zqXDjY/xdN7PED2G8YILR3KsJGdo2GiPIwlfRXWcoq3AAMA/AlTLvE9kh0AAAAASUVORK5CYII=") no-repeat center center;
+		}
+	}
+	
+	&-checkbox {
+		position: relative;
+		.transition( color 0.3s linear );
+		
+		form & {
+			cursor: pointer;
+		}
+		
+		&__u {
+			.bj-get-checkbox-u();
+		}
+		
+		&.i-checked {
+			color: @gray-darker;
+		}
+		
+		&.i-checked &__u {
+			.bj-get-checkbox-u-hover();
+		}
+	}
+	
+	
+	&-cf__colors {
+		&__i {
+			float: left;
+			margin: 0 1px 12px 0;
+			width: 24px;
+			height: 24px;
+			border: 1px solid #f0f0f0;
+			
+			input {
+				display: none;
+			}
+		}
+	}
+
+	&-cf__size__i {
+		padding: 0 2px;
+		margin: 0 4px 12px 0;
+		font-weight: normal;
+		
+		input {
+			display: none;
+		}
+	}
+}

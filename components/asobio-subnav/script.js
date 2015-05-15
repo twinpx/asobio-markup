@@ -1,0 +1,1 @@
+!function(a){"use strict";a(function(){a(".b-asobio-subnav a").click(function(b){b.preventDefault(),b.stopPropagation();var c=a(this).data("rel");a(".b-asobio-subnav__dropdown").each(function(){a(this).data("rel")===c&&a(this).find("article").slideDown()})})})}(jQuery);

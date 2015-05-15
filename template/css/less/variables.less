@@ -1,0 +1,61 @@
+//variables
+@grid-padding: 10px;
+
+@gray-lightest: #f2f2f2;
+
+@screen-xxs-width: 360px;
+@block-title-height: 45px;
+
+@title-height: 36px;
+
+@header-top-link-height: 40px;
+@header-top-height: 60px;
+@darken-brand-primary: darken( @brand-primary, 20% );
+
+//mixins
+.ib() {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.absolute-center() {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.keyframes (@name, @fromRules, @toRules) {
+    @-webkit-keyframes ~'@{name}' { 0% { @fromRules(); } 100% { @toRules(); } }
+            @keyframes ~'@{name}' { 0% { @fromRules(); } 100% { @toRules(); } }
+}
+
+.bg-transition() {
+	.bj-transition( background-color );
+}
+
+.bj-transition( @prop ) {
+	.transition( @prop 0.2s ease );
+}
+
+.bj-checkbox-transition() {
+	.transition( all 0.3s cubic-bezier(0.680, -0.550, 0.265, 1.550) );
+}
+
+.bj-get-checkbox-u() {
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	width: 4px;
+	height: 4px;
+	background: #000;
+	display: block;
+	visibility: hidden;
+	.transition( all 0.3s cubic-bezier(0.680, -0.550, 0.265, 1.550));
+}
+
+.bj-get-checkbox-u-hover() {
+	width: 100%;
+	left: 0;
+	height: 2px;
+	visibility: visible;
+	color: @gray-darker;
+}

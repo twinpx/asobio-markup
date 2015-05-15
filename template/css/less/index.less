@@ -1,0 +1,107 @@
+.bj {
+  
+  &-advantage {
+    
+    h4 {
+      font-size: @font-size-large;
+      font-weight: normal;
+      padding-left: 80px;
+      background-repeat: no-repeat;
+      background-position: 0 center;
+      line-height: 70px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0;
+      
+      &.i-price {
+        background-image: data-uri( 'img/price.png' );
+      }
+      
+      &.i-quality {
+        background-image: data-uri( 'img/quality.png' );
+      }
+      
+      &.i-delivery {
+        background-image: data-uri( 'img/delivery.png' );
+      }
+      
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.2;
+      }
+    }
+    
+    p {
+      max-width: 300px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
+	&-index-banners {
+		img {
+			.center-block();
+		}
+	}
+	
+	&-news-carousel {
+		padding-right: 7%; 
+		padding-left: 7%; 
+		@media (max-width: @screen-xs-max) {
+			font-size: @font-size-large;
+		}
+	}
+	
+	&-catalogue-tabs {
+  
+		hr {
+      margin-bottom: ceil( @line-height-computed * 0.3 );
+      margin-top: ceil( @line-height-computed * 0.3 );
+    }
+    
+		.active .bj-icon {
+			&.i-thumbs-up {
+				background-position: -41px -60px;
+			}
+			
+			&.i-new {
+				background-position: -77px -60px;
+			}
+			
+			&.i-flash {
+				background-position: -110px -60px;
+			}
+			
+			&.i-hit {
+				background-position: -142px -60px;
+			}
+		}
+		
+		.carousel-indicators {
+			bottom: -30px;
+		}
+	}
+}
+
+.chevron-right,
+.chevron-left {
+	display: inline-block;
+	width: 32px;
+	height: 128px;
+	background: url("data:image/gif;base64,R0lGODlhDAAXAIABAP///////yH5BAEAAAEALAAAAAAMABcAAAIejI8BmcvnnpImPstwo5Nq9EFcNXZcCJaoOK5kq6oFADs=") no-repeat center center rgba(0,0,0,0.5);
+	.opacity(0);
+	.bj-transition( opacity );
+	
+	.banner-carousel:hover & {
+		.opacity(0.5);
+	}
+	
+	.banner-carousel:hover a:hover & {
+		.opacity(1);
+	}
+}
+
+.chevron-right {
+	background-image: url("data:image/gif;base64,R0lGODlhDAAXAIABAP///////yH5BAEAAAEALAAAAAAMABcAAAIdRI55ps2dHlwzViRnhttd+nXYJYIaiVZlsLZpVQAAOw==");
+}
