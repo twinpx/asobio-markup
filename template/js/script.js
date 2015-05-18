@@ -725,7 +725,7 @@
       }
       
       function reload() {
-        window.location.replace( window.location );
+       // window.location.replace( window.location );
       }
       
       function setCookie( cookie ) {
@@ -736,8 +736,8 @@
       cookie = getCookie();
       
       if ( !cookie || mobile !== cookie ) {
-        setCookie( mobile );
-        reload();
+        //setCookie( mobile );
+        //reload();
       }
       
     }());
