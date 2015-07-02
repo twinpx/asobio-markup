@@ -1,0 +1,68 @@
+.sales_box_header{
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+.sales_box_header:before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #cbcbcb;
+    top: 50%;
+}
+.sales_box_header>span{
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sales_box_row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.sales_box_row [class*='col-']{
+    padding: 0px;
+}
+.sales_box_row .row{
+    margin: 0px;
+}
+.sales_box_row .product_preview{
+    width: 50%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    font-weight: normal;
+}
+.sales_box_row .product_preview .image{
+    margin-bottom: 30px;
+}
+.sales_box_row .product_preview .name{
+    margin-bottom: 5px;
+    color: #666666;
+}
+.sales_box_row .product_preview .price{
+    color: #333333;
+}
+.sales_box_row_btn{
+    max-width: 262px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+@media (max-width:768px){
+    .sales_box_row{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .sales_box_row .product_preview{
+        padding: 10px;
+    }
+    .sales_box_row_btn{
+        max-width: initial;
+    }
+}
