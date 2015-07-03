@@ -3,6 +3,7 @@
     position: relative;
     margin-bottom: 20px;
     font-weight: normal;
+	font-family: 'Clear Sans';
 }
 .sales_box_header:before{
     content: "";
@@ -37,6 +38,7 @@
     padding: 15px;
     text-align: center;
     font-weight: normal;
+	vertical-align: top;
 }
 .sales_box_row .product_preview .image{
     margin-bottom: 30px;
