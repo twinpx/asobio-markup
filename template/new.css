@@ -2,6 +2,7 @@
     text-transform: uppercase;
     position: relative;
     margin-bottom: 20px;
+    font-weight: normal;
 }
 .sales_box_header:before{
     content: "";
@@ -30,8 +31,9 @@
     margin: 0px;
 }
 .sales_box_row .product_preview{
-    width: 50%;
-    float: left;
+    width: 12.09%;
+    /*float: left;*/
+    display: inline-block;
     padding: 15px;
     text-align: center;
     font-weight: normal;
@@ -54,6 +56,11 @@
     margin-bottom: 35px;
 }
 
+@media (max-width:992px){
+    .sales_box_row .product_preview{
+        width: 24.5%;
+    }
+}
 @media (max-width:768px){
     .sales_box_row{
         margin-left: -10px;
@@ -61,6 +68,7 @@
     }
     .sales_box_row .product_preview{
         padding: 10px;
+        width: 49%;
     }
     .sales_box_row_btn{
         max-width: initial;
