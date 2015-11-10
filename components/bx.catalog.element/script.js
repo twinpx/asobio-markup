@@ -1675,6 +1675,10 @@ window.JCCatalogElement.prototype.SelectOfferProp = function()
 		arTreeItem = [],
 		RowItems = null,
 		target = BX.proxy_context;
+    
+  if ( !!target && BX.hasClass( target, 'bx_missing' )) {
+    return;
+  }
 
 	if (!!target && target.hasAttribute('data-treevalue'))
 	{
@@ -2091,6 +2095,11 @@ window.JCCatalogElement.prototype.ChangeInfo = function()
 	{
 		if (!!this.obPrice.price)
 		{
+      //set quantity of the offer
+      if ( document.getElementById( 'CatalogElementQuantity' ) && this.offers[index].MAX_QUANTITY ) {
+        document.getElementById( 'CatalogElementQuantity' ).innerHTML = this.offers[index].MAX_QUANTITY;
+      }
+      //bitrix
 			BX.adjust(this.obPrice.price, {html: this.offers[index].PRICE.PRINT_DISCOUNT_VALUE});
 			if (this.offers[index].PRICE.DISCOUNT_VALUE !== this.offers[index].PRICE.VALUE)
 			{
