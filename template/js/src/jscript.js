@@ -1,5 +1,45 @@
 (function($) {
 
+  function discountWindow() {
+    var $discount = $( '#discount' );
+    var time = $(' #discountLink ').data( 'time' );
+    
+    setTimeout( function() {
+      $discount.modal('show');
+    }, time );
+    
+    
+    $discount.on('hidden.bs.modal', function (e) {
+      $discount.removeClass( 'i-success' );
+      $discount.find( '.form-control' ).val('');
+    })
+
+    $( '#getDiscount' ).click( function(e) {
+      var $link = $( this );
+      var $email = $link.closest( '.modal' ).find( '.form-group' );
+      var email = $email.find( '.form-control' ).val();
+      if ( email && email.match( /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i )) {
+        $.ajax({
+          url: $link.data( 'url' ),
+          type: $link.data( 'method' ),
+          dataType: "json",
+          data: "email=" + email,
+          success: function(data) {
+            $email.removeClass( 'has-error' );
+            if ( data.status === 'success' ) {
+              $link.closest( '.modal' ).addClass( 'i-success' );
+            }
+          },
+          error: function() {}
+        });
+      } else {
+        $email.addClass( 'has-error' );
+      }
+      
+      e.preventDefault();
+    });
+  }
+
   function h1NavText() {
     var $h1 = $( '.col-sm-6 > h1' );
     if ( $h1.text().length >= 25 ) {
@@ -398,6 +438,8 @@
 		textMore();
     
     h1NavText();
+    
+    discountWindow();
 		
 		if ( matchMedia ) {
 			if ( window.matchMedia( "(min-width: 500px)" ).matches ) {
