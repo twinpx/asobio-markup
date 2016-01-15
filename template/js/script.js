@@ -361,14 +361,19 @@
     var $discount = $( '#discount' );
     var time = $(' #discountLink ').data( 'time' );
     
-    setTimeout( function() {
-      $discount.modal('show');
-    }, time );
+    if ( !$.cookie( 'asobio_subscription' )) {
+      setTimeout( function() {
+        $discount.modal('show');
+      }, time );
+    }
     
     
     $discount.on('hidden.bs.modal', function (e) {
       $discount.removeClass( 'i-success' );
       $discount.find( '.form-control' ).val('');
+      if ( !$.cookie( 'asobio_subscription' ) || $.cookie( 'asobio_subscription' ) === 'close' ) {
+        $.cookie( 'asobio_subscription', 'close', { expires: 3, path: '/', domain: window.location.hostname });
+      }
     })
 
     $( '#getDiscount' ).click( function(e) {
@@ -383,6 +388,7 @@
           data: "email=" + email,
           success: function(data) {
             $email.removeClass( 'has-error' );
+            $.cookie( 'asobio_subscription', 'sent', { expires: 365, path: '/', domain: window.location.hostname });
             if ( data.status === 'success' ) {
               $link.closest( '.modal' ).addClass( 'i-success' );
             }
