@@ -1,4 +1,6 @@
-﻿<a href="#discount" id="discountLink" data-toggle="modal" data-target="#discount" data-time="5000">Discount</a>
+
+<?if(!$USER->IsAuthorized() && !$_COOKIE['asobio_subscription']):?>
+<a href="#discount" id="discountLink" data-toggle="modal" data-target="#discount" data-time="5000">Discount</a>
 
 <div class="modal fade" id="discount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm" style="z-index:999999">
@@ -15,7 +17,7 @@
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
             <h2 class="text-center i-success-hidden">Получите персональную скидку на ваш email.</h2>
-            <h2 class="i-success">Спасибо. На вашу почту отправлено письмо с кодом, который вы сможете использовать при оформление покупки.</h2>
+            <h2 class="i-success">Спасибо. На вашу почту отправлено письмо с кодом, который вы сможете использовать при оформлении покупки.</h2>
             <div class="form-group i-success-hidden">
               <input type="email" class="form-control">
             </div>
@@ -27,12 +29,13 @@
         
       </div>
       <div class="bj-modal-footer text-center">
-        <a href="#" class="btn btn-primary btn-size-L i-success-hidden" id="getDiscount" data-url="/php/discount.json" data-method="GET">Получить скидку</a>
-        <a href="#" class="btn btn-default btn-size-L i-success" data-dismiss="modal">Продолжить покупку</a>
+        <a href="#" class="btn btn-primary i-success-hidden" id="getDiscount" data-url="/php/discount.json" data-method="GET">Получить скидку</a>
+        <a href="#" class="btn btn-default i-success" data-dismiss="modal">Продолжить покупку</a>
       </div>
     </div>
   </div>
 </div>
+<?endif;?>
 
 <div id="b-float-phone">
 	<div class="b-float-phone__bg"></div>

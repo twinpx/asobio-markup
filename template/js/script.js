@@ -1,6 +1,6 @@
 /*!
  * The best internet store
- * 2015 Tatiana
+ * 2016 Tatiana
  * Licensed under ISC
  */
 /*! HTML5 Shiv vpre3.5 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */

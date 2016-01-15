@@ -570,7 +570,7 @@
     white-space: nowrap
 }
 
-.bx_size .dropdown-toggle .caret {
+/*.bx_size .dropdown-toggle .caret {
     width: 18px;
     height: 11px;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAKCAYAAAC5Sw6hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJdJREFUeNpi+P//P8PMmTM1QTQ5GKaXWUpKioOBgeHE2bNn2Y2NjY8ykABmzZpVDqQmAPXOYEpLS/sB5DgDcQ5UghRDckB6QWYwgQSBjLtAyoFYw5AMcYDqZWCCSRJrGDZDUAwixjBchmAYhM8wfIaAACMo6nB4QRlIHQDiKVAhnIbgNQjNMAZ8hhA0CMkwBnyGgABAgAEA/A+Iup9DCKAAAAAASUVORK5CYII=) no-repeat center center;
@@ -578,7 +578,7 @@
     display: inline-block;
     vertical-align: middle;
     margin: 0
-}
+}*/
 
 .bx_size .dropdown-text {
     white-space: nowrap;
@@ -883,7 +883,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
     border-top: 1px #cbcbcb solid
 }
 
-.collapsing-block h3:first-child:before {
+/*.collapsing-block h3:first-child:before {
     content: '';
     position: absolute;
     width: 18px;
@@ -896,7 +896,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg)
-}
+}*/
 
 .collapsing-block.closed .collapsing-content {
     max-height: 0;
@@ -2206,7 +2206,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
     border-top: 1px #cbcbcb solid
 }
 
-.collapsing-block h3:first-child:before {
+/*.collapsing-block h3:first-child:before {
     content: '';
     position: absolute;
     width: 18px;
@@ -2219,7 +2219,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg)
-}
+}*/
 
 .collapsing-block.closed .collapsing-content {
     max-height: 0;
@@ -2554,7 +2554,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
 			width: 100%;
 			white-space: nowrap
 		}
-		.bx_size .dropdown-toggle .caret {
+		/*.bx_size .dropdown-toggle .caret {
 			width: 18px;
 			height: 11px;
 			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAKCAYAAAC5Sw6hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJdJREFUeNpi+P//P8PMmTM1QTQ5GKaXWUpKioOBgeHE2bNn2Y2NjY8ykABmzZpVDqQmAPXOYEpLS/sB5DgDcQ5UghRDckB6QWYwgQSBjLtAyoFYw5AMcYDqZWCCSRJrGDZDUAwixjBchmAYhM8wfIaAACMo6nB4QRlIHQDiKVAhnIbgNQjNMAZ8hhA0CMkwBnyGgABAgAEA/A+Iup9DCKAAAAAASUVORK5CYII=) no-repeat center center;
@@ -2562,7 +2562,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0
-		}
+		}*/
 		.bx_size .dropdown-text {
 			white-space: nowrap;
 			text-overflow: ellipsis;

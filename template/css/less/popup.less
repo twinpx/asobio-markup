@@ -27,9 +27,19 @@
 }
 
 .popup-window {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  &-overlay {
+    background-color: #c0c0c0;
+    opacity: 0.81!important;
+  }
+
 	&-content {
+    margin: 35px 40px;
+    
 		img {
-			height: 400px !important;
+			height: 200px !important;
 		}
 		
 		p {
@@ -42,14 +52,41 @@
 			margin-left: 0 !important;
 		}
 	}
+  
+  &-element-table {
+    width: 533px;
+  }
+  
+  &-td-text {
+    padding-left: 35px;
+    padding-right: 40px;
+  }
 	
-	&-right-column {
-		width: 5px !important;
-	}
+  &-top-row,
+  &-bottom-row,
+	&-right-column,
+	&-left-column,
+  &-hr {
+    display: none;
+  }
+  
+  &-close-icon {
+    background: data-uri("img/close.png") no-repeat bottom left;
+    width: 33px;
+    height: 33px;
+    top: 30px !important;
+    right: 30px !important;
+    
+    &:hover {
+      background: data-uri("img/close.png") no-repeat top left;
+    }
+  }
 	
 	&-buttons {
-		margin-top: 30px;
-		margin-bottom: 30px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+    margin: 0;
+    background-color: #f2f2f2;
 	
 		.col-sm-4 {
 			width: auto !important;
@@ -59,13 +96,11 @@
 		.bx_bt_button {
 			display: inline-block;
 			margin-bottom: 0;
-			font-weight: 400;
 			text-align: center;
 			vertical-align: middle;
 			cursor: pointer;
 			background-image: none;
 			white-space: nowrap;
-			padding: 6px 15px;
 			font-size: 10.5pt;
 			line-height: 1.72857143;
 			border: 2px solid @darken-brand-primary;
@@ -73,19 +108,42 @@
 			box-shadow: none;
 			font-size: @font-size-small;
 			border-radius: 0;
-			background: #fff;
 			color: @darken-brand-primary;
 			.bj-transition( all );
+      
+      font-weight: bold;
+      padding: 15px 0;
+      text-transform: uppercase;
+      background: #f2f2f2;
+      width: 240px;
+      font-size: 14px;
 			
 			&:hover,
 			&:active,
 			&:focus {
 				outline: none;
 				background: @brand-primary;
-				color: #fff;
 				border-color: @brand-primary;
+				color: #fff;
 			}
 		}
+      
+    & .bx_item_detail:last-child .bx_bt_button {
+      background: @brand-primary;
+      border-color: @brand-primary;
+      color: #fff;
+      
+      &:hover {
+        background: lighten(@brand-primary, 5%);
+        border-color: lighten(@brand-primary, 5%);
+      }
+      
+      &:active,
+      &:focus {
+        background: darken(@brand-primary, 5%);
+        border-color: darken(@brand-primary, 5%);
+      }
+    }
 	}
 }
 
@@ -93,10 +151,6 @@
   
   &Link {
     display: none;
-  }
-
-  .bj-modal-footer {
-    background-color: #fff;
   }
 
   .i-success {
