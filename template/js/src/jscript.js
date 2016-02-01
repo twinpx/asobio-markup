@@ -4,12 +4,11 @@
     var $discount = $( '#discount' );
     var time = $(' #discountLink ').data( 'time' );
     
-    if ( !$.cookie( 'asobio_subscription' )) {
+    if ( !$.cookie( 'asobio_subscription' ) && $.cookie( 'mobile' ) && $.cookie( 'mobile' ) !== 'mobile' ) {
       setTimeout( function() {
         $discount.modal('show');
       }, time );
     }
-    
     
     $discount.on('hidden.bs.modal', function (e) {
       $discount.removeClass( 'i-success' );
@@ -31,9 +30,11 @@
           data: "email=" + email,
           success: function(data) {
             $email.removeClass( 'has-error' );
-            $.cookie( 'asobio_subscription', 'sent', { expires: 365, path: '/', domain: window.location.hostname });
             if ( data.status === 'success' ) {
               $link.closest( '.modal' ).addClass( 'i-success' );
+              $.cookie( 'asobio_subscription', 'sent', { expires: 365, path: '/', domain: window.location.hostname });
+            } else if ( data.status === 'error' && data.text ) {
+              $link.closest( '.modal' ).addClass( 'i-error' ).find( 'h2.i-error' ).text( data.text );
             }
           },
           error: function() {}
