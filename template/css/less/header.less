@@ -32,7 +32,7 @@
 			&__submenu {
 				background-color: @body-bg;
 				padding: 10px 0 0;
-				height: @header-top-height;
+				min-height: @header-top-height;
 				
 				/*.i-fixed & {
 					position: fixed;
@@ -318,6 +318,10 @@
 				line-height: @header-top-link-height;
 				padding: 0 @padding-base-horizontal;
 				margin: 0 ceil( @grid-gutter-width * 0.5 );
+        
+        @media (max-width: @screen-lg-min) {
+          padding: 0;
+        }
 			}
 		}
 		

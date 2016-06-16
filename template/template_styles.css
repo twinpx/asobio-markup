@@ -139,6 +139,7 @@
 .breadcrumb {
   font-size: 9pt;
   margin-bottom: 5px;
+  background-color: transparent;
 }
 .panel {
   border-radius: 0;
@@ -404,6 +405,14 @@ a:focus {
 .btn {
   background-image: none;
 }
+.btn-inverse {
+  background-color: #006eb9;
+  border: none;
+  color: #fff !important;
+}
+.btn-inverse:hover {
+  background-color: #0b7fce;
+}
 .btn-size-L {
   font-size: 14px;
   text-transform: uppercase;
@@ -549,11 +558,12 @@ a.bj-icon-link:focus {
   margin: 0 0 0 -12px;
 }
 .bj-price {
-  height: 36px;
+  height: 55px;
 }
-.bj-price .text-large,
 .bj-price .text-small {
-  line-height: 18px;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #999;
 }
 .bj-icon {
   width: 24px;
@@ -931,7 +941,7 @@ form .bj-checkbox {
 .bj-page-header__submenu {
   background-color: #ffffff;
   padding: 10px 0 0;
-  height: 60px;
+  min-height: 60px;
   /*.i-fixed & {
 					position: fixed;
 					top: 0;
@@ -1203,6 +1213,11 @@ form .bj-checkbox {
   line-height: 40px;
   padding: 0 11px;
   margin: 0 11px;
+}
+@media (max-width: 1200px) {
+  .bj-top-nav a {
+    padding: 0;
+  }
 }
 .bj-top-subnav {
   text-align: center;
@@ -1560,6 +1575,16 @@ form .bj-checkbox {
 .bj-sorting .form-control .caret {
   float: right;
   margin-top: 10px;
+}
+.bj-tag-panel a {
+  color: #006eb9;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+}
+.bj-tag-panel a:hover {
+  color: #006eb9;
 }
 .bj-catalogue-label {
   line-height: normal;

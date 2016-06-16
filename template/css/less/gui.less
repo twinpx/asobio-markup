@@ -77,6 +77,16 @@ a:focus {
 
 .btn {
 	background-image: none;
+  
+  &-inverse {
+    background-color: #006eb9;
+    border: none;
+    color: #fff !important;
+    
+    &:hover {
+      background-color: #0b7fce;
+    }
+  }
 	
 	&-size-L {
 		font-size: 14px;
@@ -261,11 +271,12 @@ menu {
 	}
 	
 	&-price {
-		height: 36px;
-		
-		.text-large,
+		height: 55px;
+    
 		.text-small {
-			line-height: 18px;
+			font-size: 12pt;
+      font-weight: bold;
+      color: #999;
 		}
 	}
 	

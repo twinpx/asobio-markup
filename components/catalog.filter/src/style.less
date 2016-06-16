@@ -1,9 +1,26 @@
 @import url("../../../template/css/less/components-import.less");
 
+.filter-button {
+  background: data-uri( 'img/filter-icon.png' ) no-repeat right center;
+  
+  &.i-active {
+    background-image: data-uri( 'img/filter-icon-hover.png' );
+    color: #fff;
+  }
+}
+
+#filterBlock {
+  margin-top: 20px;
+}
+
 .bj-catalogue-filter {
 	border: 3px solid @gray-lightest;
 	padding: 15px 15px;
 	font-size: 9pt;
+  
+  &.i-large {
+    padding: 0;
+  }
 	
 	@media (max-width: @screen-xs-max) {
 		& {

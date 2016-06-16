@@ -1,5 +1,9 @@
 (function($) {
 	$(function() {
+  
+    $( '.filter-button' ).click( function() {
+      $( this ).toggleClass( 'i-active' );
+    });
 	
 		$( ".bj-catalogue-filter-switch" ).click( function(e) {
 			e.preventDefault();

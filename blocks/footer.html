@@ -1,38 +1,40 @@
 
 <?if(!$USER->IsAuthorized() && !$_COOKIE['asobio_subscription']):?>
-<a href="#discount" id="discountLink" data-toggle="modal" data-target="#discount" data-time="5000">Discount</a>
+<a href="#discount" id="discountLink" data-toggle="modal" data-target="#discount" data-time="10000">Discount</a>
 
 <div class="modal fade" id="discount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm" style="z-index:999999">
     <div class="modal-content">
-    <link rel="stylesheet" type="text/css" href="/catalogue/group/group/modal.css">
-      <div class="row b-modal-head">
-        <div class="col-sm-11"></div>
-        <div class="col-sm-1 text-right">
-          <button type="button" class="bj-close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" title="Закрыть"></span></button>
-        </div>
-      </div>
-      <div class="bj-page-content container-fluid">
-        <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
-            <h2 class="text-center i-success-hidden">Получите персональную скидку на ваш email.</h2>
-            <h2 class="i-success">Спасибо. На вашу почту отправлено письмо с кодом, который вы сможете использовать при оформлении покупки.</h2>
-            <h2 class="i-error">Ошибка</h2>
-            <div class="form-group i-success-hidden">
-              <input type="email" class="form-control">
-            </div>
+      <form action="/" method="get">
+        <link rel="stylesheet" type="text/css" href="/catalogue/group/group/modal.css">
+        <div class="row b-modal-head">
+          <div class="col-sm-11"></div>
+          <div class="col-sm-1 text-right">
+            <button type="button" class="bj-close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" title="Закрыть"></span></button>
           </div>
-          <div class="col-sm-2"></div>
         </div>
-        
-        <hr class="i-size-L">
-        
-      </div>
-      <div class="bj-modal-footer text-center">
-        <a href="#" class="btn btn-primary i-success-hidden" id="getDiscount" data-url="/php/discount.json" data-method="GET">Получить скидку</a>
-        <a href="#" class="btn btn-default i-success" data-dismiss="modal">Продолжить покупку</a>
-      </div>
+        <div class="bj-page-content container-fluid">
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <h2 class="text-center">Получите персональную скидку на ваш email.</h2>
+              <h2>Спасибо. На вашу почту отправлено письмо с кодом, который вы сможете использовать при оформлении покупки.</h2>
+              <div class="form-group">
+                <input type="email" class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+          
+          <hr class="i-size-L">
+          
+        </div>
+        <div class="bj-modal-footer text-center">
+          <!--<a href="#" class="btn btn-primary i-success-hidden" id="getDiscount" data-url="/php/discount.json" data-method="GET">Получить скидку</a>-->
+          <button type="submit" class="btn btn-primary">Получить скидку</button>
+          <!--<a href="#" class="btn btn-default i-success" data-dismiss="modal">Продолжить покупку</a>-->
+        </div>
+      </form>
     </div>
   </div>
 </div>

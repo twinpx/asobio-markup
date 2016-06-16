@@ -38,7 +38,6 @@ module.exports = function (grunt) {
 					//"template/js/plugins/hammer.js/hammer.js",
 					"template/js/libs/jquery.ui.touch-punch.min.js",
 					"template/js/plugins/jquery.scrollTo/jquery.scrollTo.min.js",
-					"template/js/src/modernizr.js",
 					"template/js/plugins/jquery.cookie.js",
 					"template/js/src/jscript.js"
 				],
