@@ -42,6 +42,13 @@ module.exports = function (grunt) {
 					"template/js/src/jscript.js"
 				],
         dest: "template/js/script.js"
+      },
+      css: {
+        src: [
+					"template/css/custom.css",
+					"template/colors/colors_asobio.css"
+				],
+        dest: "template/custom.css"
       }
     },
 		
@@ -51,7 +58,8 @@ module.exports = function (grunt) {
 				options: {
 				},
 				files: {
-					"template/css/template_styles.css": "template/css/less/styles.less"
+					"template/css/template_styles.css": "template/css/less/styles.less",
+					"template/css/custom.css": "template/css/less/custom/less/styles.less"
 				}
 			},
 			//production
@@ -171,13 +179,13 @@ module.exports = function (grunt) {
 					file: 'purple_white',
 					brandPrimary: '#a3add7',
 					brandSecondary: '#5c6eb8'
-				}/*,
+				},
 				{
 					name: 'asobio',
 					file: 'asobio',
 					brandPrimary: '#006eb9',
 					brandSecondary: '#5b5b5b'
-				},*/
+				}
 			]
 		}
 		
@@ -214,5 +222,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask("default", [ "clean", "concat", "uglify" ]);
 	//creates all color schemes files in folder /template/colors/
-  grunt.registerTask("schemes", schemesTasks );
+  //grunt.registerTask("schemes", schemesTasks );
+  grunt.registerTask("scheme", "less:asobio" );
+  grunt.registerTask("custom", ["less:prod", "less:dev", "concat:css"] );
 };

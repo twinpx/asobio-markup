@@ -2642,3 +2642,7 @@ dt.item-colors + dd input[type="radio"]:active + label:before {
 .modal-dialog .bj-close-modal:hover{background-position:top left;}
 
 .bx-quant{margin:20px 0 0 0;}
+
+.modal-dialog .form-control {
+  width: 100%;
+}

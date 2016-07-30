@@ -1,0 +1,60 @@
+.banner-carousel {
+  
+  &-title {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    
+    &__content {
+      .ib();
+      background-color: #fff;
+      line-height: 88px;
+      height: 88px;
+      width: 80%;
+      position: relative;
+      
+      &:before {
+        content: "";
+        .ib();
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 44px 23px 44px 0;
+        border-color: transparent #ffffff transparent transparent;
+        position: absolute;
+        top: 0;
+        left: -23px;
+      }
+      
+      &:after {
+        content: "";
+        .ib();
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 44px 0 44px 23px;
+        border-color: transparent transparent transparent #ffffff;
+        position: absolute;
+        top: 0;
+        right: -23px;
+      }
+      
+      span {
+        font-size: 18pt;
+        line-height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        @media ( max-width: 540px ) {
+          font-size: 13.5pt;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

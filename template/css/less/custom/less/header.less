@@ -1,0 +1,52 @@
+.bj {
+	&-page {
+		&-header {
+						
+			&__menu-link .bj-icon {
+				margin: 0 0 0 25px;
+			}
+			
+			&__sales-link .bj-icon {
+				margin: 0 25px 0 0;
+			}
+						
+			&__dropdown {
+								
+				h3 {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	
+	&-logo {
+		font-size: 18pt;
+		.ib();
+		margin-right: 10px;
+		
+		&-space {
+			&__icon {
+				
+				&.bj-cart-icon {
+					margin-right: 30px;
+					
+					@media (max-width: @screen-sm-max) {
+						float: right;
+						margin: 0 10px 0 0;
+					}
+				}
+			}
+		}
+	}
+	
+	&-top {
+		&-nav {
+			
+			a {
+        @media (max-width: @screen-lg-min) {
+          padding: 0;
+        }
+			}
+		}
+	}
+}

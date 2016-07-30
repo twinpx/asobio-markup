@@ -3,6 +3,15 @@ body {
   color: #666666;
 }
 
+thead {
+  border-bottom: none;
+}
+
+td,
+th {
+  border-radius: 0;
+}
+
 button:focus {
 	outline: none !important;
 }
@@ -17,6 +26,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5 {
 	display: block;
+  word-wrap: break-word;
 	
 	&:first-child {
 		margin-top: 0;
@@ -77,46 +87,12 @@ a:focus {
 
 .btn {
 	background-image: none;
-  
-  &-inverse {
-    background-color: #006eb9;
-    border: none;
-    color: #fff !important;
-    
-    &:hover {
-      background-color: #0b7fce;
-    }
-  }
 	
 	&-size-L {
-		font-size: 14px;
-    text-transform: uppercase;
+		font-size: 13.5pt;
 		font-weight: 700;
 		line-height: 56px;
 	}
-  
-  &-primary {
-    border-radius: 0;
-    
-    & {
-      background-color: #006eb9 !important;
-      border-color: #006eb9;
-      color: #fff !important;
-    }
-    
-    &:hover {
-      background-color: #0b7fce !important;
-      border-color: #0b7fce !important;
-      color: #fff !important;
-    }
-    
-    &:focus,
-    &:active {
-      background-color: #07609c !important;
-      border-color: #07609c !important;
-      color: #fff !important;
-    }
-  }
 }
 
 .hidden-xxs {
@@ -147,7 +123,7 @@ a:focus {
 	}
 }
 
-hr {	
+hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: @grid-padding;
@@ -162,10 +138,10 @@ hr {
 		clear: both;
 	}
 	
-	&.i-size-S {
-    margin-bottom: 5px;
-		margin-top: 5px;
-  }
+	&.i-size-M {
+		margin-bottom: ceil( @grid-padding * 1.5 );
+		margin-top: ceil( @grid-padding * 1.5 );
+	}
 	
 	&.i-size-L {
 		margin-bottom: ceil( @grid-padding * 2.5 );
@@ -271,12 +247,11 @@ menu {
 	}
 	
 	&-price {
-		height: 55px;
-    
+		height: 36px;
+		
+		.text-large,
 		.text-small {
-			font-size: 12pt;
-      font-weight: bold;
-      color: #999;
+			line-height: 18px;
 		}
 	}
 	
@@ -361,14 +336,26 @@ menu {
 		}*/
 		
 		&.i-menu {
-			background: url("data:image/gif;base64,R0lGODlhDwAOAIABAMzMzP///yH5BAEAAAEALAAAAAAPAA4AAAIUhI+pa+EPo5y02siyPrf7b23iUgAAOw==") no-repeat center center;
+			background: data-uri( 'img/catalog.png' ) no-repeat center center;
 			
 			&:hover {
-				background-image: url("data:image/gif;base64,R0lGODlhDwAOAIABAGZmZv///yH5BAEAAAEALAAAAAAPAA4AAAIUhI+pa+EPo5y02siyPrf7b23iUgAAOw==");
+				background-image: data-uri( 'img/catalog-hover.png' );
 			}
 			
 			.bj-page-header__top & {
-				background-image: url("data:image/gif;base64,R0lGODlhDwAOAIABAP///////yH5BAEAAAEALAAAAAAPAA4AAAIUhI+pa+EPo5y02siyPrf7b23iUgAAOw==");
+				background-image: data-uri( 'img/catalog-hover.png' );
+			}
+		}
+		
+		&.i-looks {
+			background: data-uri( 'img/looks.png' ) no-repeat center center;
+			
+			&:hover {
+				background-image: data-uri( 'img/looks-hover.png' );
+			}
+			
+			.bj-page-header__top & {
+				background-image: data-uri( 'img/looks-hover.png' );
 			}
 		}
 	}
@@ -523,12 +510,12 @@ menu {
 
 .bj-hr-heading {
 	border-top: 1px solid @gray-lightest;
-	font-family: "Roboto Slab", "Times New Roman", serif;
-	font-size: 13.5pt;
+	font-family: "Open Sans", "Times New Roman", serif;
+	font-size: 12pt;
 	font-weight: 600;
 	position: relative;
 	text-transform: uppercase;
-  margin: 10px 0;
+  margin: 15px 0;
 	
 	&__content {
 		position: absolute;
@@ -548,7 +535,7 @@ menu {
 
 .bj-side-block {
   border: 3px solid @gray-lightest;
-	padding: 15px 15px;
+	padding: 15px;
 	font-size: 9pt;
 	
 	@media (max-width: @screen-xs-max) {
@@ -557,7 +544,8 @@ menu {
 		}
 	}
 	
-	.h3 {
+	.h3.bj-hidden-link {
+    margin-top: 0;
 		margin-bottom: 10px;
     background: data-uri( 'img/down.gif' ) no-repeat right center;
     cursor: pointer;
@@ -567,6 +555,7 @@ menu {
     }
 	}
   
+  > .h3,
   .bj-hidden {
     margin-bottom: 15px;
   }
@@ -579,4 +568,31 @@ menu {
   menu {
     margin: 0 0 0 7px;
   }
+}
+
+
+
+.bj-hidden {
+	padding-top: 1px;
+	
+	&-link {
+		
+		&, &:hover {
+			text-decoration: none;
+		}
+	}
+	
+	&__hidden {
+		display: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    
+    .i-open & {
+      display: block;
+    }
+	}
+}
+
+.bx_ordercart_order_table_container td.right {
+  float: none !important;
 }

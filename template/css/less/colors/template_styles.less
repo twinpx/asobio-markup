@@ -1,11 +1,17 @@
 .btn-default,
 .popup-window-buttons .bx_bt_button {
 	&:hover,
-	&:active,
-	&:focus {
+	&:focus,
+	&:active {
 		background: @brand-primary;
 		border-color: @brand-primary;
 	}
+  
+  /*&:blur {
+    background: #fff;
+		border-color: @brand-secondary;
+    color: @brand-secondary;
+  }*/
 }
 
 .ui-widget-header {
@@ -53,4 +59,12 @@
 
 .bj-footer-bitrix-btn__inner a:before {
 	background: @brand-primary;
+}
+
+.side-nav {
+  background-color: @brand-primary;
+  
+  & > li {
+    border-bottom-color: lighten( @brand-primary, 5% );
+  }
 }

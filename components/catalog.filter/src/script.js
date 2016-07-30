@@ -1,4 +1,4 @@
-(function($) {
+п»ї(function($) {
 	$(function() {
   
     $( '.filter-button' ).click( function() {
@@ -53,7 +53,7 @@
 				values: [ $inputMin.val(), $inputMax.val() ],
 				step: step,
 				slide: function( event, ui ) {
-					$value.text( 'От ' + ui.values[0] + ' до ' + ui.values[1] + ' руб.' );
+					$value.text( 'РѕС‚ ' + ui.values[0] + ' РґРѕ ' + ui.values[1] + ' СЂСѓР±.' );
 					$inputMin.val( ui.values[0] );
 					$inputMax.val( ui.values[1] );
 				}

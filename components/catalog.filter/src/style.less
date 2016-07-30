@@ -1,16 +1,61 @@
 @import url("../../../template/css/less/components-import.less");
 
 .filter-button {
-  background: data-uri( 'img/filter-icon.png' ) no-repeat right center;
+  background-image: data-uri( 'img/filter-icon.png' ) !important;
+  background-repeat: no-repeat;
+  background-position: right center;
   
   &.i-active {
-    background-image: data-uri( 'img/filter-icon-hover.png' );
+    background-image: data-uri( 'img/filter-icon-hover.png' ) !important;
     color: #fff;
   }
 }
 
 #filterBlock {
   margin-top: 20px;
+}
+
+#kombox-filter {
+  border: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  
+  .kombox-footer {
+    background-color: #f2f2f2;
+    padding: 30px !important;
+    margin: 10px -10px 0;
+    text-align: center;
+    
+    .kombox-filter-submit {
+      padding: 0 !important;
+      float: none !important;
+    }
+    
+    .btn {
+      width: 292px;
+      
+      &:not( .btn-inverse ) {
+        background-color: #f2f2f2;
+        
+        &:hover {
+          background-color: #006eb9;
+        }
+      }
+    }
+  }
+  
+  .kombox-filter-show-properties {
+    padding: 0 !important;
+  }
+  
+  .kombox-clear {
+    display: none !important;
+  }
+  
+  .btn-inverse {
+    border: 2px solid #006eb9;
+    margin-right: 17px;
+  }
 }
 
 .bj-catalogue-filter {

@@ -407,10 +407,13 @@
 
 .bx_catalog_top_home .bx_catalog_item_price .bx_price {
     font-size: 17pt;
-    color: #ff3c3c;
     font-weight: bold;
     padding-top: 0;
     margin-top: -3px;
+    
+    &.text-danger {
+      color: #ff3c3c;
+    }
 }
 
 .bx_catalog_top_home .bx_catalog_item {
@@ -630,6 +633,8 @@
 		line-height: 1.3;
     color: #333;
     font-weight: 400;
+    border-bottom: none;
+    margin-bottom: 0;
 		
 		@media (max-width: @screen-xs-max) {
 			height: auto;
@@ -707,6 +712,15 @@
 		left: 15px;
     width: 32px;
 		z-index: 990;
+    
+    bottom: auto;
+    margin-left: 0;
+    background: none;
+    height: auto;
+    color: inherit;
+    padding: 0;
+    line-height: inherit;
+    text-align: inherit;
 			
 		&__i {
 			display: block;
@@ -721,15 +735,10 @@
 		}
 		
 		.i-amount {
-      background-color: #006eb9;
+      background: data-uri( 'img/amount.png' ) no-repeat center center #006eb9;
       border-radius: 51%;
       width: 32px;
       height: 32px;
-      color: #fff;
-      font-size: 13.5pt;
-      font-family: "Times New Roman";
-      line-height: 32px;
-      text-align: center;
 		}
 		
 		.i-new {
@@ -737,6 +746,8 @@
       border-radius: 51%;
       width: 32px;
       height: 32px;
+      
+      padding: 0;
 		}
 	}
 }
